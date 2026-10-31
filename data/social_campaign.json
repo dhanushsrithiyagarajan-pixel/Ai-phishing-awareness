@@ -1,0 +1,43 @@
+[
+  {
+    "id": "post-1",
+    "headline": "🚨 Panic is the Attacker's Greatest Weapon: Spot Artificial Urgency!",
+    "message": "Did you just receive an email screaming 'Your campus account will be DELETED in 24 hours'? Pause before you panic. Cybercriminals use artificial countdowns and intimidating threats to bypass your critical thinking.",
+    "safety_tip": "Campus IT will NEVER give you a 24-hour ultimatum to verify passwords over a web link. Always verify directly through student.example.edu, never through emailed links.",
+    "hashtags": ["#CyberSecurityAwareness", "#PhishingDefense", "#CollegeCyberSafety", "#ThinkBeforeYouClick", "#InfoSec"],
+    "visual_concept": "High-contrast visual showing a glowing digital countdown clock ticking down to zero with a mouse cursor hovering hesitantly over a red 'Verify Now' button, with a prominent caution shield stating 'Stop. Think. Verify.'"
+  },
+  {
+    "id": "post-2",
+    "headline": "💼 Remote Job Offer with No Interview? Check Before You Cash In!",
+    "message": "College students are prime targets for fake internship scams! An unsolicited email offering $35/hour for a 'remote research assistant'—no interview required, plus a $2,000 supply check? It is 100% a fake-check scam.",
+    "safety_tip": "If an employer sends you a check and asks you to wire money back for 'equipment vendors,' stop. The check will bounce, and you will be on the hook for every dollar wired.",
+    "hashtags": ["#StudentJobs", "#InternshipScams", "#CyberAwareness", "#CollegeLife", "#FinancialDefense"],
+    "visual_concept": "Split graphic: on the left, an illustrated cheerful student receiving an envelope labeled '$2,500 Cashier Check'; on the right, an exposed trap door revealing the bouncing check and bank overdraft warning."
+  },
+  {
+    "id": "post-3",
+    "headline": "🔒 Look Beyond the Padlock: HTTPS Doesn't Mean 'Safe'!",
+    "message": "Myth Buster: 'If the website has a padlock and HTTPS, it must be safe!' False! Over 80% of active phishing sites now use free SSL certificates. HTTPS only encrypts the connection—it doesn't prove the site isn't run by a scammer.",
+    "safety_tip": "Always inspect the actual root domain before typing passwords. 'canvas-login.example.com.phish.test' is NOT your university portal, even if it has a shiny padlock icon.",
+    "hashtags": ["#CyberMyths", "#HTTPS", "#InfoSecTips", "#DigitalLiteracy", "#StaySecure"],
+    "visual_concept": "An illustrated browser address bar featuring a glowing green lock next to a clearly deceptive domain ('secure-login.test'), with a magnifying glass zooming in on the deceptive top-level domain."
+  },
+  {
+    "id": "post-4",
+    "headline": "📱 Courier Delivery SMS at 10 PM? Beware of Smishing!",
+    "message": "Expecting an online textbook delivery? Scammers blast millions of SMS texts saying 'Your package delivery failed due to missing street address. Pay $1.99 redelivery fee at bit.ly/delivery-x'. Don't tap that link!",
+    "safety_tip": "That $1.99 is just bait to steal your credit card CVV and billing identity. Real postal couriers don't text you from 10-digit mobile numbers demanding card payments for address fixes.",
+    "hashtags": ["#SmishingAlert", "#MobileSecurity", "#PackageScams", "#CyberHygiene", "#StudentSafety"],
+    "visual_concept": "A smartphone screen showing an alert notification with a shortened link, with a bright yellow crime-scene caution tape overlaid with the stamp 'DO NOT TAP'."
+  },
+  {
+    "id": "post-5",
+    "headline": "🛡️ The Golden 3-Step Rule for Every College Student",
+    "message": "Protecting your tuition funds, personal identity, and academic standing takes just three simple habits every time you check your inbox.",
+    "safety_tip": "1. CHECK THE SENDER DOMAIN (look past display names). 2. HOVER BEFORE YOU CLICK (verify true URLs). 3. REPORT DON'T IGNORE (help protect your fellow classmates).",
+    "hashtags": ["#SecurityFirst", "#CyberCulture", "#CampusDefense", "#ZeroTrust", "#StudentHacks"],
+    "visual_concept": "Three clean modern vector badge icons in a row: Eye (Inspect Sender), Hand (Hover URLs), and Megaphone (Report to IT), set against a sleek navy and cyan cyber grid."
+  }
+]
+

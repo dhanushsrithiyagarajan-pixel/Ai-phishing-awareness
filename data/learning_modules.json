@@ -1,0 +1,149 @@
+[
+  {
+    "id": "email-phishing",
+    "title": "Email Phishing Fundamentals",
+    "icon": "mail",
+    "summary": "Mass-distributed deceptive emails mimicking trusted brands, financial institutions, or academic systems to capture user data.",
+    "mechanics": "Attackers send bulk emails crafted with corporate logos, spoofed headers, and urgent warnings to thousands of student inboxes simultaneously, banking on statistics that a certain percentage will react hastily.",
+    "warning_signs": [
+      "Generic greetings like 'Dear Customer' or 'Valued Student'",
+      "Sender display name masks an unrelated domain address",
+      "Alarmist language regarding account closure or legal action",
+      "Suspicious hyperlinked text hiding different destination URLs"
+    ],
+    "real_world_example": "A message appearing from 'Campus Portal Admin' alerting you that your storage quota exceeded 99% and demanding an immediate click to avoid losing assignments.",
+    "prevention_tips": [
+      "Hover over all links before clicking to inspect actual URL destinations.",
+      "Check the full email sender address rather than just the friendly display name.",
+      "Never navigate to critical services via links sent inside an unverified email."
+    ]
+  },
+  {
+    "id": "spear-phishing",
+    "title": "Spear Phishing & Targeted Attacks",
+    "icon": "crosshair",
+    "summary": "Highly customized social engineering attacks crafted using reconnaissance on a specific target's academic major, campus activities, or peers.",
+    "mechanics": "Unlike generic spam, spear phishers research social profiles (LinkedIn, departmental faculty pages, student club rosters) to reference authentic professor names, course numbers, or project titles.",
+    "warning_signs": [
+      "Mentions specific course details or research projects, but comes from an external email address (e.g. professor.name@gmail.com instead of .edu)",
+      "Requests unusual favors, gift cards, or confidential department spreadsheets",
+      "Pressures you to bypass established university procurement or verification channels"
+    ],
+    "real_world_example": "An email ostensibly from your department chair asking you to quickly purchase Apple or Amazon gift cards for a guest lecturer because they are in an urgent faculty meeting.",
+    "prevention_tips": [
+      "Verify out-of-character requests via a known phone number, office visit, or official departmental channel.",
+      "Look for official internal university address extensions (@example.edu).",
+      "Remember that no legitimate professor or administrator asks students to buy gift cards."
+    ]
+  },
+  {
+    "id": "smishing-vishing",
+    "title": "Smishing (SMS) & Vishing (Voice) Scams",
+    "icon": "phone-call",
+    "summary": "Attacks transmitted through mobile SMS text messages (Smishing) or live/automated fraudulent telephone calls (Vishing).",
+    "mechanics": "Leverages the intimate, immediate nature of mobile devices. Smishing uses shortened links to exploit mobile browser interfaces where URLs are truncated. Vishing uses voice spoofing or AI voice cloning to impersonate bank fraud departments or police.",
+    "warning_signs": [
+      "SMS alerts claiming failed parcel deliveries or bank account freezes with shortened links",
+      "Callers demanding immediate telephone payment via wire transfer, cryptocurrency, or pre-paid cards to avoid arrest or suspension",
+      "Callers asking you to read back a 2FA Multi-Factor Authentication token"
+    ],
+    "real_world_example": "Receiving a text: 'FedEx: Your parcel #40192 is held at depot. Pay $2.10 handling fee to release delivery at bit.ly/hold-release-now'.",
+    "prevention_tips": [
+      "Never click links sent via SMS from unknown 5-digit shortcodes or unfamiliar numbers.",
+      "Never share OTP or MFA passcodes over the phone under any circumstances.",
+      "Hang up immediately on threatening calls claiming to represent law enforcement or the tax authority."
+    ]
+  },
+  {
+    "id": "bec",
+    "title": "Business Email Compromise (BEC)",
+    "icon": "briefcase",
+    "summary": "Sophisticated financial impersonation targeting student finance, student club treasuries, research grants, or campus administration.",
+    "mechanics": "Attackers compromise an authentic corporate or faculty email account (or create a lookalike domain) to inject fraudulent wire transfer or direct deposit requests into ongoing billing conversations.",
+    "warning_signs": [
+      "Sudden requests to modify previously established vendor or supplier banking details",
+      "Extreme insistence on secrecy and urgency ('Keep this strictly between us until the announcement')",
+      "Subtle domain typo-squatting (e.g., '@universtiy.edu' instead of '@university.edu')"
+    ],
+    "real_world_example": "A student club treasurer receives an email from the 'Club President' asking for an emergency reimbursement of $650 to be wired to a new personal account for an upcoming campus hackathon.",
+    "prevention_tips": [
+      "Implement multi-person verification for all organizational financial disbursements.",
+      "Always call known internal phone numbers to confirm any change in payment instructions.",
+      "Enforce strict dual-approval policies for treasury and club bank accounts."
+    ]
+  },
+  {
+    "id": "fake-jobs",
+    "title": "Fake Job & Internship Offers",
+    "icon": "file-text",
+    "summary": "Employment fraud exploiting students seeking internships, summer jobs, or remote work-study positions.",
+    "mechanics": "Scammers post lucrative remote job listings on social networks or send direct emails. They offer high hourly compensation with no formal interview, then initiate a fake check overpayment scheme or request identity documents for identity theft.",
+    "warning_signs": [
+      "Job offer provided without an interview, technical assessment, or formal application",
+      "Salary is suspiciously high for unskilled or flexible student work (e.g., $45/hour for data entry)",
+      "The employer asks you to deposit a corporate check into your personal bank account to buy equipment",
+      "Communication conducted entirely over Telegram, WhatsApp, or personal email addresses"
+    ],
+    "real_world_example": "An email offering a 'Remote Administrative Student Assistant' role paying $35/hr, accompanied by a $2,000 cashier's check to purchase a company laptop from an approved 'vendor'.",
+    "prevention_tips": [
+      "Never deposit checks from an employer with instructions to wire or transfer back part of the money.",
+      "Verify all job openings through your college Career Services center or verified enterprise career portals.",
+      "Research company registrations, business physical addresses, and official recruiter profiles."
+    ]
+  },
+  {
+    "id": "malicious-attachments",
+    "title": "Malicious Attachments & Trojan Files",
+    "icon": "paperclip",
+    "summary": "Infected documents, archives, or executable scripts designed to deploy ransomware, keyloggers, or spyware onto your machine.",
+    "mechanics": "Files disguised as course syllabi, campus invoices, or resume portfolios carry weaponized macros, malicious scripts (.vbs, .bat), or hidden executables (.pdf.exe) that execute background payloads when opened.",
+    "warning_signs": [
+      "Password-protected ZIP or RAR archives sent with the password in the email body (used to evade gateway antivirus scanners)",
+      "Office documents requesting you to 'Enable Editing' or 'Enable Content/Macros' to view contents",
+      "Double file extensions such as 'Financial_Aid_Application.pdf.exe'"
+    ],
+    "real_world_example": "An email labeled 'Final_Exam_Review_Notes.zip' containing an executable file that installs a stealth keylogger to record keystrokes.",
+    "prevention_tips": [
+      "Never enable macros in Office documents received from external or unverified sources.",
+      "Configure your operating system to always display file extensions for known file types.",
+      "Scan unexpected attachments with updated antivirus or services like VirusTotal prior to opening."
+    ]
+  },
+  {
+    "id": "password-theft",
+    "title": "Credential Harvesting & Password Theft",
+    "icon": "key",
+    "summary": "Deceptive landing pages engineered to visually clone genuine single sign-on (SSO) login portals to capture usernames and passwords.",
+    "mechanics": "Attackers mirror the exact HTML and CSS of your university SSO, Google Workspace, or Microsoft 365 login screen. When you enter credentials, they are immediately exfiltrated to attacker command servers, often attempting real-time MFA relay attacks.",
+    "warning_signs": [
+      "URL in address bar does not match your official institutional domain (e.g. 'sso.example-campus.com.ru' instead of 'sso.example.edu')",
+      "Unexpected prompt to re-enter your campus password while you are already logged in",
+      "Unfamiliar SSL/TLS certificate details or browser warning banners"
+    ],
+    "real_world_example": "Clicking an email link leading to a page identical to your university Canvas or Blackboard login, but hosted on 'canvas-auth-service.test'.",
+    "prevention_tips": [
+      "Always inspect the address bar before typing passwords. Bookmark official login portals.",
+      "Use modern password managers: password managers will refuse to autofill credentials on lookalike domains.",
+      "Adopt phishing-resistant hardware MFA (FIDO2 / WebAuthn security keys) where supported."
+    ]
+  },
+  {
+    "id": "social-engineering",
+    "title": "Social Engineering & Psychological Manipulation",
+    "icon": "shield-alert",
+    "summary": "Non-technical human deception manipulating trust, fear, curiosity, greed, or authority to breach security protocols.",
+    "mechanics": "Cybercriminals exploit fundamental human psychology: Robert Cialdini's influence principles including authority (fake Dean/Police), urgency (account deletion), scarcity (limited scholarship spots), and likability.",
+    "warning_signs": [
+      "Pressure to act before you have time to consult with an advisor or IT staff",
+      "Emotional manipulation evoking panic, excessive excitement, or guilt",
+      "Explicit requests to bypass standard institutional approval or procurement procedures"
+    ],
+    "real_world_example": "A caller posing as a university registrar clerk claiming your student visa or financial grant will be cancelled in 30 minutes unless you verify confidential personal identifying information.",
+    "prevention_tips": [
+      "Practice the 'Pause and Verify' principle: high emotional pressure is the number one indicator of deception.",
+      "Question any request that asks you to circumvent established campus policies.",
+      "Cultivate a culture where asking questions and verifying identity is welcomed, not discouraged."
+    ]
+  }
+]
+

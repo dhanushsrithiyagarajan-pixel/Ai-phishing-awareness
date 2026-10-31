@@ -1,0 +1,67 @@
+[
+  {
+    "id": "chk-sender",
+    "name": "Sender Address & Domain Mismatch",
+    "description": "The sender's display name claims to be official (e.g. 'Campus IT Support'), but the actual email address or root domain is unrelated, external, or misspelled (e.g., '@campus-helpdesk.test' instead of '@campus.edu').",
+    "weight": 20,
+    "category": "Header Verification",
+    "guidance": "Expand the sender header in your email client to examine the exact domain after the '@' sign."
+  },
+  {
+    "id": "chk-urgency",
+    "name": "Unusual Urgency, Panic, or Ultimatums",
+    "description": "The message demands immediate action within 12, 24, or 48 hours, threatening account closure, course deregistration, legal action, or missed monetary prizes if you do not comply immediately.",
+    "weight": 20,
+    "category": "Psychological Manipulation",
+    "guidance": "Legitimate academic and institutional departments provide ample notice and structured escalation processes before taking punitive actions."
+  },
+  {
+    "id": "chk-attachments",
+    "name": "Unexpected or Suspicious Attachments",
+    "description": "Unsolicited archives (.zip, .rar), executable files (.exe, .scr, .vbs), or Office documents (.docm, .xlsm) that prompt you to 'Enable Editing' or 'Enable Macros'.",
+    "weight": 20,
+    "category": "Payload Risk",
+    "guidance": "Never open unexpected files or enable active macros. Verify with the sender via a separate, trusted channel first."
+  },
+  {
+    "id": "chk-passwords",
+    "name": "Requests for Passwords, PINs, or One-Time Passcodes (OTP)",
+    "description": "The message explicitly asks you to reply with your password, enter it into a web form, or provide the 2-Factor Authentication (MFA) SMS code sent to your phone.",
+    "weight": 25,
+    "category": "Credential Harvesting",
+    "guidance": "Real IT departments and financial institutions will NEVER ask for your password or one-time passcodes under any circumstances."
+  },
+  {
+    "id": "chk-payments",
+    "name": "Unusual Payment Requests or Overpayment Schemes",
+    "description": "Demands for unexpected fee settlements, wire transfers, Zelle/Venmo payments, cryptocurrency, gift cards, or requests to deposit a check and transfer a portion to a third party.",
+    "weight": 25,
+    "category": "Financial Fraud",
+    "guidance": "Campus billing operates through official university financial ledgers. Advance fee requirements and gift card payment requests are universal hallmarks of fraud."
+  },
+  {
+    "id": "chk-links",
+    "name": "Suspicious Links or Mismatched Anchor Domains",
+    "description": "Hyperlinked text showing one official address while the actual destination URL points to a different domain, an IP address, a URL shortener (bit.ly), or an unusual TLD (.xyz, .top, .buzz).",
+    "weight": 20,
+    "category": "Technical Deception",
+    "guidance": "Hover over hyperlinks without clicking to inspect the real URL destination in your browser's bottom status bar."
+  },
+  {
+    "id": "chk-grammar",
+    "name": "Grammar, Punctuation, or Formatting Inconsistencies",
+    "description": "Awkward phrasings, unnatural grammar, garbled character sets, poor logo resolution, mixed typography, or misspellings of institutional department names.",
+    "weight": 10,
+    "category": "Content Quality",
+    "guidance": "While modern AI has reduced obvious spelling errors, awkward sentence structures and inconsistent formatting still frequently indicate counterfeit templates."
+  },
+  {
+    "id": "chk-bypass",
+    "name": "Requests to Bypass Normal Institutional Procedures",
+    "description": "Instructions to bypass established university procurement channels, keep the communication confidential from professors or advisors, or communicate exclusively via personal email/messaging apps.",
+    "weight": 15,
+    "category": "Policy Circumvention",
+    "guidance": "Legitimate institutional leaders respect official channels and policies. Pressure to bypass standard oversight is a major indicator of spear phishing or BEC."
+  }
+]
+

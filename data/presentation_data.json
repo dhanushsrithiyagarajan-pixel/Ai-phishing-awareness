@@ -1,0 +1,97 @@
+[
+  {
+    "slide_number": 1,
+    "title": "AI Phishing Awareness Campaign Kit",
+    "subtitle": "Defending College Students from Modern Social Engineering & Digital Scams",
+    "badge": "Cybersecurity Capstone Presentation",
+    "key_points": [
+      "College students are premier high-value targets due to high online activity, financial pressures, and trust in institutional brands.",
+      "The kit provides an interactive educational ecosystem combining transparent heuristic analysis, hands-on training samples, and threat verification.",
+      "Defensive, ethical, and beginner-friendly architecture built with Python Flask and modern client-side technologies."
+    ],
+    "presenter_notes": "Welcome faculty evaluators and fellow students. Today I am presenting our cybersecurity capstone project: the AI Phishing Awareness Campaign Kit. Our objective is to bridge the critical gap between theoretical cyber defense and practical student resilience against social engineering."
+  },
+  {
+    "slide_number": 2,
+    "title": "The Threat Landscape: Common Phishing Vectors",
+    "subtitle": "How Cybercriminals Target Academic Environments",
+    "badge": "Threat Intelligence",
+    "key_points": [
+      "Email & Spear Phishing: Highly crafted communications impersonating professors, financial aid, or campus IT.",
+      "Employment & Internship Scams: Fake check overpayments and fraudulent remote research offers targeting student job seekers.",
+      "Smishing & Vishing: High-urgency SMS package delivery lures and voice scams harvesting one-time MFA codes.",
+      "Credential Harvesting: Lookalike single sign-on (SSO) portals tricking users into revealing student credentials."
+    ],
+    "presenter_notes": "Phishing is no longer just Nigerian prince emails with broken grammar. Attackers now deploy multi-channel tactics—especially smishing and fake job offers—that leverage students' anxieties about grades, tuition, and early-career jobs."
+  },
+  {
+    "slide_number": 3,
+    "title": "Anatomy of a Phish: 6 Critical Red Flags",
+    "subtitle": "Heuristic Indicators That Expose Deception",
+    "badge": "Detection Heuristics",
+    "key_points": [
+      "1. Artificial Urgency: High-pressure countdowns (e.g., 'Terminated in 24 hours').",
+      "2. Sender Header Discrepancies: Lookalike subdomains and misleading display names.",
+      "3. Unsolicited Credential Demands: Requests for passwords, PINs, or MFA push codes.",
+      "4. Advance-Fee Financial Lures: Wire transfers, gift cards, or fake check overpayments.",
+      "5. URL & Link Obfuscation: Mismatched anchor text, URL shorteners, or deceptive TLDs.",
+      "6. Dangerous File Payloads: Hidden double extensions (.pdf.exe) and macro prompts."
+    ],
+    "presenter_notes": "In this slide, we introduce our 6 core heuristic pillars. Emphasize that phishing relies primarily on emotional manipulation—triggering fear, urgency, or excitement to force the victim's rational analysis to take a backseat."
+  },
+  {
+    "slide_number": 4,
+    "title": "Fictional Case Studies: College Scenarios",
+    "subtitle": "Demonstrating Real-World Attack Patterns Safely",
+    "badge": "Case Studies",
+    "key_points": [
+      "Case 1 (Account Deletion): Fake IT warning demanding credentials under threat of course registration cancellation.",
+      "Case 2 (Remote Internship): Unsolicited $35/hr job offer requiring cashing a $2,500 cashier's check and wiring money back.",
+      "Case 3 (Package Smishing): Courier SMS claiming failed textbook delivery with a $1.99 card harvesting fee.",
+      "Case 4 (Legitimate Baseline): Authentic CS faculty announcement highlighting contrast with deceptive messages."
+    ],
+    "presenter_notes": "Our kit features 8 clearly labeled fictional case studies utilizing reserved RFC domains like example.edu. By contrasting blatant scams with legitimate campus notices, students develop calibrated discernment rather than irrational paranoia."
+  },
+  {
+    "slide_number": 5,
+    "title": "System Architecture & Defensive Engineering",
+    "subtitle": "How the AI Phishing Awareness Kit Works Under the Hood",
+    "badge": "System Design",
+    "key_points": [
+      "Frontend: Lightweight, responsive, accessible HTML5/CSS3/Vanilla JS single-page dashboard.",
+      "Backend: Python Flask REST API providing modular endpoints (/api/analyze, /api/samples, /api/quiz).",
+      "Transparent Heuristic Engine: Zero-cost, explainable regex pattern-matching engine detecting multi-factor indicators.",
+      "Optional AI Integration: Secure server-side API key handling for LLMs (Gemini/OpenAI) with instant local fallback.",
+      "Ethical Boundary: 100% defensive; strictly fictional targets, zero real exploits, client-side score storage."
+    ],
+    "presenter_notes": "Here is our project architecture. Notice our core design choice: absolute transparency. Unlike tools that pretend to run AI when offline, our system explicitly announces whether it is running in Transparent Heuristic Demo Mode or Live AI Mode, ensuring academic integrity."
+  },
+  {
+    "slide_number": 6,
+    "title": "Interactive Defense: The 4-Step Verification Habit",
+    "subtitle": "From Awareness to Reflexive Student Security Culture",
+    "badge": "Practical Defense",
+    "key_points": [
+      "Step 1 — Pause & Breathe: Recognize emotional manipulation immediately.",
+      "Step 2 — Inspect Without Clicking: Check the true root domain and verify sender headers.",
+      "Step 3 — Out-of-Band Verification: Verify via official phone directory or saved browser bookmarks.",
+      "Step 4 — Report to Campus InfoSec: Forward as attachment to IT security to safeguard classmates."
+    ],
+    "presenter_notes": "Awareness training is only effective when translated into repeatable habits. Our interactive Red-Flag Checklist and 10-Question Knowledge Quiz embed this 4-step reflex into daily student workflows."
+  },
+  {
+    "slide_number": 7,
+    "title": "Conclusion & Capstone Deliverables",
+    "subtitle": "Empowering Campus Communities with Open Defensive Tools",
+    "badge": "Summary & Next Steps",
+    "key_points": [
+      "Delivered a complete, responsive, full-stack educational kit ready for deployment.",
+      "Comprehensive artifacts: 1,000-word research-backed awareness article, printable poster, social campaign.",
+      "Rigorous test plan: 100% passing functional test cases, verified false-positive/negative boundaries.",
+      "Zero-cost barrier: Runs locally or in containerized environments with zero required paid API subscriptions.",
+      "Thank you! Ready for questions and live system demonstration."
+    ],
+    "presenter_notes": "In conclusion, the AI Phishing Awareness Campaign Kit provides an open, robust, and accessible defensive platform. Thank you for your time and guidance. I will now proceed to the live demonstration of the Phishing Analyzer and Interactive Quiz."
+  }
+]
+

@@ -1,0 +1,133 @@
+[
+  {
+    "id": 1,
+    "question": "You receive an email claiming to be from your college IT department stating your account will be disabled in 6 hours unless you click a link and log in. What is the biggest red flag in this message?",
+    "options": [
+      "The email was sent during regular working hours",
+      "Artificial urgency pressuring you with a tight deadline to force immediate action",
+      "The message uses formal greeting language",
+      "The IT department included their office location in the signature"
+    ],
+    "correct_index": 1,
+    "explanation": "Artificial urgency is the hallmark tactic of social engineering. Attackers create panic (such as '6 hours until deletion') to induce hasty action before victims can check domain authenticity or contact IT.",
+    "category": "Social Engineering"
+  },
+  {
+    "id": 2,
+    "question": "Look at this sender address: 'bursar@university.edu.payment-center.test'. Which part indicates whether this is the genuine college domain?",
+    "options": [
+      "The prefix 'bursar@' guarantees it is the university bursar",
+      "The presence of 'university.edu' anywhere in the string makes it authentic",
+      "The actual effective domain is 'payment-center.test'; 'university.edu' is just a deceiving subdomain or prefix",
+      "The word 'payment-center' proves it is a secure certified financial processor"
+    ],
+    "correct_index": 2,
+    "explanation": "In domain names, the true root domain sits immediately to the left of the top-level domain extension (.test). Here, attackers insert 'university.edu' as a subdomain to visually trick victims, but the actual destination is 'payment-center.test'.",
+    "category": "URL & Domain Analysis"
+  },
+  {
+    "id": 3,
+    "question": "A recruiter on a student job board sends you an offer for a remote research role paying $40/hr without an interview, and offers to mail you a check for home office supplies. What scam pattern is this?",
+    "options": [
+      "Legitimate enterprise recruitment bonus",
+      "Fake check overpayment scam",
+      "University work-study matching program",
+      "Direct deposit payroll verification"
+    ],
+    "correct_index": 1,
+    "explanation": "In a fake check scam, scammers send a counterfeit check and ask the victim to deposit it and wire back money to a bogus 'vendor'. When the fraudulent check eventually bounces, the student is legally responsible for all wired funds.",
+    "category": "College Scams"
+  },
+  {
+    "id": 4,
+    "question": "You receive an SMS text message claiming: 'Your courier parcel failed delivery. Click here: bit.ly/delivery-help to pay $1.50 redelivery fee.' What phishing variant is this?",
+    "options": [
+      "Smishing (SMS phishing)",
+      "Spear phishing via LDAP",
+      "Vishing (Voice phishing)",
+      "Watering hole attack"
+    ],
+    "correct_index": 0,
+    "explanation": "Smishing refers to phishing carried out over SMS text messages. Attackers often pair generic delivery pretexts with tiny fee requests ($1.50) to steal payment card details and personal identity info.",
+    "category": "Phishing Variants"
+  },
+  {
+    "id": 5,
+    "question": "What is the safest way to verify an unexpected email from your bank claiming that unauthorized transactions were detected on your credit card?",
+    "options": [
+      "Reply directly to the email asking for confirmation",
+      "Click the link in the email and check if the URL starts with 'https://'",
+      "Call the verified customer service number printed on the back of your physical payment card or use the bank's official standalone app",
+      "Search for the email subject line on social media"
+    ],
+    "correct_index": 2,
+    "explanation": "Never rely on contact links, phone numbers, or reply-to addresses provided within a suspicious message. Always initiate independent 'out-of-band' contact using official phone numbers from the physical card or verified app.",
+    "category": "Safe Verification"
+  },
+  {
+    "id": 6,
+    "question": "An email arrives with an attachment named 'Campus_Grades_Report.pdf.exe'. Why is this file dangerous?",
+    "options": [
+      "Double extension disguising an executable file as a PDF document",
+      "PDF files cannot be opened on college computers",
+      "Executable files are always corrupted during email transit",
+      "The file name contains underscores"
+    ],
+    "correct_index": 0,
+    "explanation": "Attackers exploit Windows default settings that hide known extensions by naming files 'document.pdf.exe'. The user sees 'document.pdf' and double-clicks it, inadvertently running malicious executable code.",
+    "category": "Malware & Attachments"
+  },
+  {
+    "id": 7,
+    "question": "You inadvertently clicked a suspicious link in an email and entered your campus password before realizing it might be fake. What is your immediate priority action?",
+    "options": [
+      "Wait 48 hours to see if any suspicious transactions appear",
+      "Delete the email and shut down your computer for the day",
+      "Immediately change your campus password from an unaffected trusted device and notify college IT security / helpdesk",
+      "Email the sender asking them to delete your credentials"
+    ],
+    "correct_index": 2,
+    "explanation": "Prompt credential compromise response minimizes window of opportunity for attackers. Change passwords immediately from a trusted device, revoke active sessions if possible, and notify IT security so they can inspect logs for unauthorized access.",
+    "category": "Incident Response"
+  },
+  {
+    "id": 8,
+    "question": "A scammer calls you claiming to be your campus tech support and asks for the 6-digit Multi-Factor Authentication (MFA) push code just sent to your phone. What should you do?",
+    "options": [
+      "Share the code since the caller claimed to be university tech support",
+      "Refuse to provide the code, hang up, and report an unauthorized login attempt to your institution",
+      "Provide only the first 3 digits of the code",
+      "Text the code back to the phone number that texted it"
+    ],
+    "correct_index": 1,
+    "explanation": "MFA codes are secret secondary authorization tokens. Legitimate IT departments and banks will NEVER ask you to verbalize or text your one-time MFA codes. An MFA prompt means the attacker already has your password and is trying to bypass MFA.",
+    "category": "MFA Security"
+  },
+  {
+    "id": 9,
+    "question": "Why does having 'HTTPS' and a padlock icon in your browser address bar NOT automatically mean a website is trustworthy?",
+    "options": [
+      "The padlock only means encryption between your browser and the server, not that the site owner is honest or legitimate",
+      "HTTPS is an obsolete protocol that is no longer secure",
+      "Browser padlocks only work on mobile devices",
+      "Phishing sites cannot obtain SSL/TLS certificates"
+    ],
+    "correct_index": 0,
+    "explanation": "Modern SSL/TLS certificates (Let's Encrypt, Cloudflare) are free and automated. Over 80% of phishing sites today use valid HTTPS certificates. HTTPS guarantees data is encrypted in transit; it does not verify the website owner's integrity.",
+    "category": "Web Security"
+  },
+  {
+    "id": 10,
+    "question": "You see a printed poster on a campus bulletin board offering free student discounts if you scan a QR code. What specific threat does this represent?",
+    "options": [
+      "Denial of Service (DoS)",
+      "Quishing (QR Code Phishing) leading to malicious URLs",
+      "Buffer overflow vulnerability",
+      "SQL injection attack"
+    ],
+    "correct_index": 1,
+    "explanation": "Quishing (QR phishing) embeds malicious links into QR codes placed in public physical or digital spaces. Because human eyes cannot read the underlying URL inside a barcode, attackers use it to bypass email filters and trick mobile users.",
+    "category": "Modern Phishing Tactics"
+  }
+]
+

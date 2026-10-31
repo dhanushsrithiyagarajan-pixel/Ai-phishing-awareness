@@ -1,0 +1,150 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Fake College Account Suspension Warning",
+    "scenario": "Fake college account warning",
+    "expected_classification": "Likely phishing",
+    "risk_level": "High",
+    "sender": "Campus IT Support <admin@security-verification-example.edu.fake-portal.test>",
+    "subject": "URGENT: Your Campus Account Will Be Terminated Within 24 Hours",
+    "body": "Dear Student,\n\nOur system detected multiple unauthorized login attempts to your college portal from an unknown location. To prevent immediate account deletion and disruption of your course registrations, you must verify your identity within 24 hours.\n\nPlease click the secure verification link below and submit your campus student ID, date of birth, and current password:\nhttps://auth.example-campus-portal.test/login/verify-credentials\n\nFailure to complete this verification will result in permanent loss of campus email and student portal access.\n\nRegards,\nCampus Information Security Helpdesk\nCentral University Campus",
+    "warning_signs": [
+      "Artificial urgency (threatens termination within 24 hours)",
+      "Lookalike or misleading sender domain (.fake-portal.test masquerading as official campus IT)",
+      "Explicit request for sensitive credentials (student ID and password)",
+      "Vague, alarming pretext (unauthorized login attempts from unknown location)",
+      "Threat of punitive consequence (loss of course registration and portal access)"
+    ],
+    "explanation": "Campus IT departments will never demand your password or threaten immediate account deletion within a 24-hour window. Attackers use artificial urgency to provoke fear and bypass critical thinking, driving victims to credential-harvesting landing pages.",
+    "safe_action": "Do not click the link. Never provide your password. Report the email immediately to your real college IT security team (e.g., itsupport@example.edu) or use your institution's email client 'Report Phishing' button."
+  },
+  {
+    "id": "sample-2",
+    "title": "Unsolicited International Merit Scholarship Offer",
+    "scenario": "Suspicious scholarship message",
+    "expected_classification": "Likely phishing",
+    "risk_level": "High",
+    "sender": "Global Education Foundation <awards@apex-merit-scholarship.example.org>",
+    "subject": "Congratulations! You have been selected for a $5,000 Academic Excellence Award",
+    "body": "Dear Applicant,\n\nWe are pleased to inform you that your profile has been selected by our international selection committee for a $5,000 unrestricted student bursary for the upcoming academic semester.\n\nBecause this grant has limited disbursement funds, your grant must be claimed within 48 hours. To facilitate direct wire transfer to your personal bank account, please remit a one-time refundable document processing fee of $45 via digital gift card or wire transfer and submit your banking account details here:\nhttps://portal.apex-merit-scholarship.example.org/claim-award?id=STU9921\n\nCongratulations once again on your exceptional academic achievement.\n\nWarm regards,\nDr. Evelyn Vance\nDirector of Disbursal, Apex Merit Foundation",
+    "warning_signs": [
+      "Unsolicited prize or scholarship that the student never applied for",
+      "Advance-fee fraud mechanism (requiring $45 processing fee via gift card/wire to release 'free' money)",
+      "Request for sensitive banking details via an external link",
+      "Manufactured urgency (48-hour claim deadline)",
+      "Unverifiable entity using generic prestigious-sounding titles"
+    ],
+    "explanation": "Legitimate scholarships never require an applicant to pay an upfront processing fee, buy gift cards, or provide direct banking access prior to verifiable institutional enrollment. This is a classic advance-fee financial scam targeting college students.",
+    "safe_action": "Do not send any money, gift cards, or banking information. Check with your college financial aid office to verify legitimate scholarship opportunities."
+  },
+  {
+    "id": "sample-3",
+    "title": "High-Paying Remote Internship with Check Deposit Request",
+    "scenario": "Fake internship offer",
+    "expected_classification": "Likely phishing",
+    "risk_level": "High",
+    "sender": "Hiring Manager <recruiting@global-tech-ventures.example.com>",
+    "subject": "Immediate Offer: Remote Research Assistant ($35/hr) - No Interview Required",
+    "body": "Hello,\n\nOur HR team reviewed your student resume through the campus job board. We are impressed by your academic background and are excited to offer you the position of Remote Research Assistant at Global Tech Ventures.\n\nCompensation: $35.00/hour (10-15 hours/week, flexible schedule).\n\nTo help you set up your remote home office, we will mail you a corporate cashier's check for $2,500. You will deposit this check into your bank account, keep $500 as an advance stipend, and wire the remaining $2,000 to our approved IT equipment vendor via Zelle or wire transfer.\n\nPlease reply with your full legal name, home address, phone number, and personal email address to receive your offer letter and check.\n\nBest regards,\nMarcus Sterling\nTalent Acquisition Specialist, Global Tech Ventures",
+    "warning_signs": [
+      "Job offer extended without an interview or formal application process",
+      "Unrealistically high hourly rate for an entry-level student role",
+      "Fake check overpayment scheme (deposit a check, wire a portion back to a 'vendor')",
+      "Communication from a generic address bypassing institutional career portals",
+      "Pressure to conduct financial transactions through non-reversible channels (Zelle/wire)"
+    ],
+    "explanation": "This is a dangerous employment/fake-check scam. The mailed cashier's check is counterfeit. When the student deposits it, federal regulations make funds temporarily available, but weeks later the check bounces. The student is held financially liable for the entire amount wired to the scammer.",
+    "safe_action": "Do not accept the check or provide personal contact details. Verify job openings exclusively through your college career center (e.g., Handshake or college career office) and official company websites."
+  },
+  {
+    "id": "sample-4",
+    "title": "Urgent Package Delivery Rescheduling SMS / Email",
+    "scenario": "Unexpected parcel notification",
+    "expected_classification": "Suspicious — needs verification",
+    "risk_level": "Medium",
+    "sender": "Speedy Parcel Express Delivery <dispatch-notification@speedy-express.example.net>",
+    "subject": "Notice: Incomplete shipping address for parcel #TRK-88201994",
+    "body": "Dear Customer,\n\nYour package with tracking number #TRK-88201994 could not be delivered on 30/10/2026 due to an incomplete street address on file. Our courier driver returned the parcel to our regional holding depot.\n\nTo update your delivery address and schedule a redelivery attempt, please access our dispatch portal:\nhttps://tracking.speedy-express.example.net/redelivery/update?track=TRK-88201994\n\nA nominal redelivery surcharge of $1.99 may apply if not updated within 72 hours. If unclaimed, the package will be returned to the sender.\n\nCustomer Support Team\nSpeedy Express Logistics",
+    "warning_signs": [
+      "Vague notification not mentioning the recipient's name or package contents",
+      "Request for a small card payment ($1.99) designed to harvest credit card CVV and billing information",
+      "Urgency created by threatening return to sender or holding fees",
+      "Generic delivery company name that student may not recall ordering from"
+    ],
+    "explanation": "Postal delivery smishing/phishing scams are extremely common. Attackers cast a wide net knowing students frequently order textbooks or online items. The minimal $1.99 charge is a lure to capture credit card numbers for subsequent unauthorized charges.",
+    "safe_action": "Do not click the tracking link or input payment details. Check your actual order history from stores you purchased from, and look up tracking numbers directly on official courier portals."
+  },
+  {
+    "id": "sample-5",
+    "title": "Security Alert: Fraudulent Activity on Bank Account",
+    "scenario": "Impersonation of a bank",
+    "expected_classification": "Likely phishing",
+    "risk_level": "High",
+    "sender": "First Metro Security Alert <fraud-prevention@first-metro-bank.example.com.security-alert.test>",
+    "subject": "CRITICAL: Suspicious charge of $489.00 flagged on your debit card",
+    "body": "First Metro Banking Alert,\n\nA debit transaction of $489.00 at 'CryptoPay Merchant Intl' was flagged as potentially fraudulent on your checking card ending in 4012.\n\nIf you did NOT authorize this transaction, call our automated fraud resolution line immediately at +1-800-555-0199 or click below to cancel the charge and reset your security passcode:\nhttps://verify.first-metro-bank.example.com.security-alert.test/fraud-claim\n\nDo not share your one-time SMS verification code with anyone except the automated prompt to secure your funds.\n\nFirst Metro Customer Protection Department",
+    "warning_signs": [
+      "Subdomain trickery: sender domain ends in .security-alert.test rather than legitimate bank domain",
+      "Panic-inducing fraud claim ($489 charge)",
+      "Preemptive harvesting of one-time passcodes (OTP)",
+      "Unverified toll-free number leading to a rogue vishing phone system",
+      "Urgent call-to-action to click a link"
+    ],
+    "explanation": "Bank impersonation combines scare tactics with credential harvesting. Attackers spoof bank security alerts and trick users into entering login credentials or reading back 2FA OTP codes to steal account access.",
+    "safe_action": "Never click banking links in emails or SMS. Never speak OTP codes over inbound/unverified calls. Open the official bank app directly or call the customer service phone number printed on the physical back of your debit card."
+  },
+  {
+    "id": "sample-6",
+    "title": "Urgent Student Tuition Remittance Overdue Notice",
+    "scenario": "Urgent payment request",
+    "expected_classification": "Likely phishing",
+    "risk_level": "High",
+    "sender": "Office of the Bursar <bursar-billing@example-college-finance.test>",
+    "subject": "FINAL NOTICE: Outstanding Tuition Balance of $320.00 Due Immediately",
+    "body": "Dear Student,\n\nOur financial records indicate an outstanding balance of $320.00 for lab fees and technology dues for the current term. Past due balances must be cleared prior to 5:00 PM today to prevent an administrative registration hold on your transcript.\n\nPlease remit the balance immediately via our expedited express payment gateway:\nhttps://bursar.example-college-finance.test/pay-direct\n\nIf you believe this notice was sent in error or have already remitted payment, reply directly with your transaction receipt.\n\nSincerely,\nOffice of Student Financial Services\nExample University College",
+    "warning_signs": [
+      "Extremely tight deadline (5:00 PM today)",
+      "Threat of academic sanctions (registration hold, transcript blockage)",
+      "Domain 'example-college-finance.test' differs from official college domain 'example.edu'",
+      "Pressure to pay via an unusual direct gateway rather than standard student portal"
+    ],
+    "explanation": "Attackers leverage stressful academic deadlines and financial fear. Even if the message looks semi-official, students should never make payments through unsolicited links received via email.",
+    "safe_action": "Do not pay through the emailed link. Log into your institution's official student portal (e.g., student.example.edu) directly from your browser bookmarks and verify your student ledger balance."
+  },
+  {
+    "id": "sample-7",
+    "title": "CS101: Midterm Exam Room Change Announcement",
+    "scenario": "Legitimate class announcement",
+    "expected_classification": "Likely legitimate",
+    "risk_level": "Low",
+    "sender": "Prof. Arthur Pendelton <arthur.pendelton@faculty.example.edu>",
+    "subject": "CS101 Fall: Room Assignment Update for Thursday Midterm",
+    "body": "Hello CS101 Students,\n\nDue to scheduled audio-visual maintenance in Science Hall 102, our midterm exam this Thursday at 10:00 AM has been relocated to Turing Hall Auditorium (Room 204).\n\nPlease note:\n1. Bring a valid student ID card and a blue or black pen.\n2. Calculators are permitted, but phones must be switched off.\n3. The syllabus review slides are available on our official Canvas LMS course shell under Module 6.\n\nIf you require disability accommodations through the student academic office, please ensure your paperwork is confirmed by Wednesday noon.\n\nBest regards,\nProf. Arthur Pendelton\nDepartment of Computer Science\nExample University | Office: Tech Hall 314",
+    "warning_signs": [
+      "No urgency or threats",
+      "No requests for credentials, passwords, or payments",
+      "Sender address matches authenticated institutional faculty domain (@faculty.example.edu)",
+      "References existing internal course platform (Canvas LMS) without external login links"
+    ],
+    "explanation": "This email possesses authentic contextual characteristics: genuine institutional domain, realistic academic instructions, professional tone, no request for credentials or money, and no suspicious external links.",
+    "safe_action": "This email appears legitimate. As good practice, check your official LMS announcements page (Canvas/Blackboard) to confirm the room change."
+  },
+  {
+    "id": "sample-8",
+    "title": "Campus Career Services: Annual Tech Placement Drive Schedule",
+    "scenario": "Legitimate placement notification",
+    "expected_classification": "Likely legitimate",
+    "risk_level": "Low",
+    "sender": "Campus Career Center <career-services@campus.example.edu>",
+    "subject": "Schedule Release: Fall Campus Placement Fair & Resume Workshop",
+    "body": "Dear Students,\n\nThe Central Campus Placement Cell is pleased to announce the schedule for our upcoming Fall Placement Fair taking place November 12-14 at the Student Union Hall.\n\nEvent Highlights:\n- Over 30 verified regional and national hiring partners participating.\n- Complimentary resume review clinics hosted by industry alumni.\n- Pre-registration is open through your existing campus SSO single-sign-on login at https://careers.campus.example.edu/events/fall2026.\n\nImportant Reminders:\n- Career Services will never ask for payment or banking details for placement participation.\n- Professional business casual attire is encouraged.\n\nWe look forward to supporting your professional journey!\n\nWarm regards,\nStudent Career Development & Placement Office\nExample University | Contact: (555) 014-9900",
+    "warning_signs": [
+      "Consistent official campus domain (.campus.example.edu)",
+      "Explicit proactive safety warning ('Career Services will never ask for payment or banking details')",
+      "Internal SSO link on the authentic campus domain",
+      "Verifiable campus contact phone number and physical location"
+    ],
+    "explanation": "This message exhibits exemplary legitimate traits. The link uses the exact campus domain, it proactively warns students against fraud, requests no sensitive info, and aligns with standard collegiate communication.",
+    "safe_action": "Safe to read and attend. Bookmark the official campus career portal to stay informed about university hiring events."
+  }
+]

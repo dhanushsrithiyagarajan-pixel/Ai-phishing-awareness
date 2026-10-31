@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Slide Deck - AI Phishing Awareness Kit</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    body {
+      background: #050811;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .deck-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: #0a101d;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .deck-main-viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .deck-card {
+      width: 100%;
+      max-width: 1000px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+    .deck-nav-bar {
+      padding: 1rem 2rem;
+      background: #0a101d;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #presenter-notes-container {
+      position: absolute;
+      bottom: 80px;
+      left: 2rem;
+      right: 2rem;
+      background: #020617;
+      border: 1px solid #38bdf8;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="deck-top-bar">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <a href="/" style="color: #38bdf8; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
+        ← Back to App
+      </a>
+      <span style="color: var(--text-muted);">|</span>
+      <span style="font-weight: 700; color: #ffffff;">AI Phishing Awareness Kit — Capstone Presentation</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <button class="btn btn-secondary btn-sm" id="btn-toggle-notes">Show Presenter Notes</button>
+      <button class="btn btn-secondary btn-sm" id="btn-fullscreen-slide">Fullscreen [F]</button>
+      <span class="nav-status-badge status-demo" id="slide-counter-badge">Slide 1 of 7</span>
+    </div>
+  </header>
+
+  <main class="deck-main-viewport" id="presentation-deck-box">
+    <div class="deck-card">
+      <div id="slide-content-area">
+        <!-- Injected via presentation.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Presenter Notes Overlay (Collapsible) -->
+  <div id="presenter-notes-container" style="display: none;">
+    <div id="presenter-notes-content"></div>
+  </div>
+
+  <footer class="deck-nav-bar">
+    <div style="font-size: 0.85rem; color: var(--text-muted);">
+      Use <strong>← / →</strong> or <strong>Spacebar</strong> to navigate slides
+    </div>
+    <div style="display: flex; gap: 0.75rem;">
+      <button class="btn btn-secondary" id="btn-prev-slide">← Previous Slide</button>
+      <button class="btn btn-primary" id="btn-next-slide">Next Slide →</button>
+    </div>
+  </footer>
+
+  <script src="/static/js/presentation.js"></script>
+</body>
+</html>
+

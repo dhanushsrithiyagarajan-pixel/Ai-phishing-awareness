@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Phishing Awareness Campaign Kit | Cybersecurity Capstone Project</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#dashboard" class="nav-brand" onclick="switchTab('dashboard')">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </div>
+        <span>AI Phishing Kit</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><button class="nav-btn active" data-tab="dashboard">Dashboard</button></li>
+        <li><button class="nav-btn" data-tab="analyzer">Phishing Analyzer</button></li>
+        <li><button class="nav-btn" data-tab="learning">Learning Center</button></li>
+        <li><button class="nav-btn" data-tab="samples">Training Samples</button></li>
+        <li><button class="nav-btn" data-tab="checklist">Red-Flag Checklist</button></li>
+        <li><button class="nav-btn" data-tab="campaign">Awareness Campaign</button></li>
+        <li><button class="nav-btn" data-tab="quiz">Quiz</button></li>
+        <li><button class="nav-btn" data-tab="reports">Project Reports</button></li>
+      </ul>
+
+      <div id="engine-status-badge" class="nav-status-badge status-demo">
+        <span class="pulse-dot"></span> Demo Heuristic Mode
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+
+    <!-- Global Educational Disclaimer Banner -->
+    <div class="alert-banner">
+      <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <div>
+        <strong>Educational Cybersecurity Capstone Project:</strong> This application is designed strictly for cybersecurity awareness, defensive education, and college demonstration. All scenarios and domains use invented organizations and reserved test domains. Automated detection is advisory and should not replace institutional verification.
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         TAB 1: HOME DASHBOARD
+         =================================================================== -->
+    <section id="tab-dashboard" class="tab-section active">
+      <div class="section-header">
+        <span class="section-tag">Cybersecurity Awareness Portal</span>
+        <h1 class="section-title">AI Phishing Awareness Campaign Kit</h1>
+        <p class="section-desc">
+          An interactive, defensive educational platform empowering college students and university communities to identify phishing attacks, credential theft, fake internships, and digital deception.
+        </p>
+      </div>
+
+      <!-- Quick Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon-box stat-icon-blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-samples-count">8</div>
+            <div class="stat-label">Fictional Training Scenarios</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-box stat-icon-cyan">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-modules-count">8</div>
+            <div class="stat-label">Security Awareness Modules</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-box stat-icon-green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-quiz-score">Not Taken</div>
+            <div class="stat-label">Latest Quiz Performance</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-box stat-icon-amber">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-value">100%</div>
+            <div class="stat-label">Zero-Cost Offline Capable</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Access Cards -->
+      <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #f8fafc;">Interactive Campaign Modules</h3>
+      <div class="quick-access-grid">
+        <div class="quick-card" onclick="switchTab('analyzer')">
+          <div class="quick-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+          <h3>AI Phishing Message Analyzer</h3>
+          <p>Paste any suspicious message to scan for urgency, credential demands, payment fraud, and lookalike domains.</p>
+          <span class="card-action-link">Open Analyzer →</span>
+        </div>
+
+        <div class="quick-card" onclick="switchTab('learning')">
+          <div class="quick-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Learning Center</h3>
+          <p>Explore 8 comprehensive lessons on spear phishing, smishing, fake internships, and credential harvesting.</p>
+          <span class="card-action-link">Explore Lessons →</span>
+        </div>
+
+        <div class="quick-card" onclick="switchTab('samples')">
+          <div class="quick-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+          </div>
+          <h3>8 Fictional Training Scenarios</h3>
+          <p>Examine realistic campus scenarios from fake IT warnings to authentic professor announcements.</p>
+          <span class="card-action-link">Inspect Samples →</span>
+        </div>
+
+        <div class="quick-card" onclick="switchTab('checklist')">
+          <div class="quick-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 11 12 14 22 4"/>
+              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+            </svg>
+          </div>
+          <h3>Interactive Red-Flag Checklist</h3>
+          <p>Screen messages against 8 critical threat indicators with instant weighted risk scoring and recommendations.</p>
+          <span class="card-action-link">Use Checklist →</span>
+        </div>
+
+        <div class="quick-card" onclick="switchTab('quiz')">
+          <div class="quick-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3>10-Question Knowledge Quiz</h3>
+          <p>Test your defensive instincts against real-world scenarios and track your local proficiency score.</p>
+          <span class="card-action-link">Start Quiz →</span>
+        </div>
+
+        <div class="quick-card" onclick="switchTab('campaign')">
+          <div class="quick-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Awareness Campaign & Poster</h3>
+          <p>Access 5 ready-to-use social media campaigns and a printable high-DPI cyber awareness poster.</p>
+          <span class="card-action-link">View Campaign →</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 2: AI PHISHING MESSAGE ANALYZER
+         =================================================================== -->
+    <section id="tab-analyzer" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Defensive Analysis Engine</span>
+        <h1 class="section-title">AI Phishing Message Analyzer</h1>
+        <p class="section-desc">
+          Paste any suspicious email, text message, or job offer to evaluate threat characteristics, detect deceptive indicators, and receive safe handling actions.
+        </p>
+      </div>
+
+      <div class="analyzer-layout">
+        <!-- Input Panel -->
+        <div class="analyzer-input-card">
+          <div class="card-top-bar">
+            <span class="card-subtitle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+              Message Content
+            </span>
+            <div class="sample-selector">
+              <select id="sample-select-dropdown" class="sample-select-dropdown">
+                <option value="">-- Load a Training Sample --</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="input-label" for="analyzer-sender-input">Sender Header / Address (Optional)</label>
+          <input type="text" id="analyzer-sender-input" class="text-input" placeholder="e.g. IT Support &lt;admin@security-verification-example.edu.fake-portal.test&gt;">
+
+          <label class="input-label" for="analyzer-body-input">Message Body / Email Text *</label>
+          <textarea id="analyzer-body-input" class="text-input text-area" placeholder="Paste the full email text, subject, or message here to inspect for warning signs..."></textarea>
+
+          <div class="analyzer-actions">
+            <button class="btn btn-secondary btn-sm" id="btn-clear-analyzer">Clear</button>
+            <button class="btn btn-primary" id="btn-analyze-message">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              Analyze Message
+            </button>
+          </div>
+        </div>
+
+        <!-- Output Panel -->
+        <div class="analyzer-results-card">
+          <div class="card-top-bar">
+            <span class="card-subtitle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+              Analysis Report
+            </span>
+          </div>
+
+          <div id="analyzer-results-output">
+            <div class="results-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4"/>
+                <path d="M12 8h.01"/>
+              </svg>
+              <p style="font-size: 1rem; color: #94a3b8; font-weight: 600;">No Analysis Generated Yet</p>
+              <p style="font-size: 0.85rem; max-width: 360px;">Paste an email on the left or select a training scenario, then click "Analyze Message".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 3: LEARNING CENTER
+         =================================================================== -->
+    <section id="tab-learning" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Cybersecurity Curriculum</span>
+        <h1 class="section-title">Phishing Awareness Learning Center</h1>
+        <p class="section-desc">
+          Structured lessons explaining social engineering mechanics, threat vectors, warning signs, and defensive best practices tailored for academic settings.
+        </p>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-filter-bar">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="module-search-input" placeholder="Search awareness topics, vectors, or tactics (e.g. smishing, jobs, passwords)...">
+        </div>
+      </div>
+
+      <!-- Modules Grid -->
+      <div class="learning-grid" id="learning-grid-container">
+        <!-- Rendered via app.js -->
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 4: TRAINING SAMPLES
+         =================================================================== -->
+    <section id="tab-samples" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Empirical Training Data</span>
+        <h1 class="section-title">Eight Fictional Training Samples</h1>
+        <p class="section-desc">
+          Carefully constructed scenarios using invented organizations and reserved test domains. Compare blatant phishing, nuanced suspicious communications, and legitimate institutional announcements.
+        </p>
+      </div>
+
+      <!-- Filter pills -->
+      <div class="samples-tabs-bar">
+        <button class="sample-pill-btn active" data-filter="all" onclick="filterSamples('all')">All Samples (8)</button>
+        <button class="sample-pill-btn" data-filter="phishing" onclick="filterSamples('phishing')">Phishing Scenarios (5)</button>
+        <button class="sample-pill-btn" data-filter="suspicious" onclick="filterSamples('suspicious')">Suspicious Scenarios (1)</button>
+        <button class="sample-pill-btn" data-filter="legitimate" onclick="filterSamples('legitimate')">Legitimate Baselines (2)</button>
+      </div>
+
+      <!-- Samples list -->
+      <div id="samples-list-container">
+        <!-- Rendered via app.js -->
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 5: RED-FLAG CHECKLIST
+         =================================================================== -->
+    <section id="tab-checklist" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Interactive Threat Screening</span>
+        <h1 class="section-title">Interactive Red-Flag Checklist</h1>
+        <p class="section-desc">
+          Check off the characteristics present in the message you received. The scoring engine evaluates the cumulative risk and provides tailored verification steps.
+        </p>
+      </div>
+
+      <div class="checklist-container">
+        <!-- Checklist items -->
+        <div class="checklist-items-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+            <h3 style="font-size: 1.15rem; color: #f8fafc;">8 Core Phishing Indicators</h3>
+            <button class="btn btn-secondary btn-sm" id="btn-reset-checklist">Reset Checklist</button>
+          </div>
+          <div class="checklist-group" id="checklist-items-container">
+            <!-- Rendered via checklist.js -->
+          </div>
+        </div>
+
+        <!-- Dynamic summary -->
+        <div class="checklist-summary-card">
+          <h3 style="font-size: 1.15rem; color: #f8fafc; margin-bottom: 1rem;">Threat Assessment</h3>
+          <div id="checklist-summary-output">
+            <!-- Injected via checklist.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 6: AWARENESS CAMPAIGN
+         =================================================================== -->
+    <section id="tab-campaign" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Public Education Materials</span>
+        <h1 class="section-title">Social Media Awareness Campaign & Poster</h1>
+        <p class="section-desc">
+          Deployable awareness campaign materials engineered for student organizations, campus social feeds, and bulletin boards.
+        </p>
+      </div>
+
+      <div class="campaign-layout">
+        <!-- Social posts column -->
+        <div>
+          <h3 style="font-size: 1.25rem; color: #f8fafc; margin-bottom: 1rem;">Ready-to-Use Social Media Posts</h3>
+          <div id="social-posts-container">
+            <!-- Rendered via app.js -->
+          </div>
+        </div>
+
+        <!-- Poster preview column -->
+        <div class="poster-preview-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.25rem; color: #f8fafc;">Campus Awareness Poster</h3>
+            <a href="/poster" target="_blank" class="btn btn-primary btn-sm">
+              🖨️ Open Full Poster / Print
+            </a>
+          </div>
+          <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 1rem;">
+            Designed in high-resolution HTML/CSS with print stylesheet optimization. Click above to view or export as a clean A4 PDF.
+          </p>
+          <iframe src="/poster" class="poster-frame" title="Cybersecurity Poster Preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 7: INTERACTIVE QUIZ
+         =================================================================== -->
+    <section id="tab-quiz" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Knowledge Assessment</span>
+        <h1 class="section-title">Cybersecurity Awareness Quiz</h1>
+        <p class="section-desc">
+          Assess your defensive knowledge across 10 multiple-choice questions covering real-world college scenarios, domain inspection, MFA tokens, and social engineering.
+        </p>
+      </div>
+
+      <div class="quiz-wrapper">
+        <div class="quiz-card">
+          <div id="quiz-active-view">
+            <!-- Injected via quiz.js -->
+          </div>
+          <div id="quiz-results-view" style="display: none;">
+            <!-- Injected via quiz.js on completion -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TAB 8: PROJECT REPORTS & PRESENTATION
+         =================================================================== -->
+    <section id="tab-reports" class="tab-section">
+      <div class="section-header">
+        <span class="section-tag">Capstone Documentation</span>
+        <h1 class="section-title">Project Reports & Slide Deck</h1>
+        <p class="section-desc">
+          Examine the academic research report, ~1,000-word awareness article, test plan, verification results, automation strategy, and 7-slide capstone presentation.
+        </p>
+      </div>
+
+      <div class="docs-nav-bar">
+        <button class="doc-tab-btn active" onclick="switchReportTab('presentation-view', this)">Slide Deck Presentation</button>
+        <button class="doc-tab-btn" onclick="switchReportTab('article-view', this)">Awareness Article (~1,000 Words)</button>
+        <button class="doc-tab-btn" onclick="switchReportTab('research-view', this)">Research Report</button>
+        <button class="doc-tab-btn" onclick="switchReportTab('test-plan-view', this)">Test Plan & Verification</button>
+        <button class="doc-tab-btn" onclick="switchReportTab('automation-view', this)">Automation Workflow</button>
+        <button class="doc-tab-btn" onclick="switchReportTab('prompts-view', this)">AI Prompt Library</button>
+        <button class="doc-tab-btn" onclick="switchReportTab('ethics-view', this)">Ethics & Limitations</button>
+      </div>
+
+      <div class="doc-content-card">
+        <!-- Subtab 1: Slide Deck Presentation -->
+        <div id="doc-presentation-view" class="doc-pane" style="display: block;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem;">
+            <div>
+              <h2 style="font-size: 1.4rem; color: #ffffff;">Capstone Slide Deck Presentation</h2>
+              <p style="font-size: 0.85rem; color: #94a3b8;">7-slide interactive deck with comprehensive speaker notes and architecture walkthrough.</p>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <a href="/presentation" target="_blank" class="btn btn-primary btn-sm">Full Screen Presentation Mode ↗</a>
+              <button class="btn btn-secondary btn-sm" id="btn-toggle-notes">Show Presenter Notes</button>
+            </div>
+          </div>
+
+          <div id="slide-content-area" style="min-height: 280px;">
+            <!-- Rendered via presentation.js -->
+          </div>
+
+          <div id="presenter-notes-container" style="display: none; background: rgba(0,0,0,0.4); border-left: 3px solid #38bdf8; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+            <div id="presenter-notes-content"></div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+            <span id="slide-counter-badge" class="nav-status-badge status-demo">Slide 1 of 7</span>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-secondary btn-sm" id="btn-prev-slide">← Previous</button>
+              <button class="btn btn-primary btn-sm" id="btn-next-slide">Next →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtab 2: Complete Awareness Article -->
+        <div id="doc-article-view" class="doc-pane doc-prose" style="display: none;">
+          <h1>Don't Take the Bait: The College Student's Definitive Survival Guide to Phishing and Digital Deception</h1>
+          <p><em>By the Cybersecurity Defense Initiative | Published October 2026 | Educational Capstone Series</em></p>
+          
+          <p>College is a transformative period characterized by new responsibilities, packed schedules, and financial independence. However, it also represents an environment where students routinely access multiple portals, register for classes, handle tuition installments, and search for internships. Cybercriminals understand this reality intimately. To an attacker, a distracted student rushing between lectures while checking their smartphone between classes is the ideal target.</p>
+
+          <h2>Understanding Modern Phishing: Beyond Broken Grammar</h2>
+          <p>For many years, cybersecurity education taught users to look for awkward grammar, obvious misspellings, or absurd claims of overseas lottery winnings. While those crude scams still circulate, modern phishing has evolved into an industrialized, sophisticated threat vector. Attackers now deploy generative AI to craft impeccably written emails, mirror authentic campus single sign-on (SSO) login portals with pixel-perfect fidelity, and orchestrate coordinated campaigns across email, SMS, and telephone calls.</p>
+          
+          <p>Phishing fundamentally relies on <strong>social engineering</strong>—the psychological manipulation of human instincts rather than the exploitation of software vulnerabilities. Cybercriminals exploit several foundational psychological triggers:</p>
+          <ul>
+            <li><strong>Artificial Urgency & Fear:</strong> Threats of account termination, registration holds, or exam disqualification designed to induce panic and force victims to act before critical thinking intervenes.</li>
+            <li><strong>Financial Relief & Greed:</strong> Unsolicited scholarship awards, tuition refunds, or remote research assistant roles offering exorbitant hourly pay ($35–$45/hr) with no interview.</li>
+            <li><strong>Authority & Deference:</strong> Impersonation of department deans, course instructors, university registrars, or banking fraud investigators.</li>
+            <li><strong>Curiosity & Obligation:</strong> Delivery notifications claiming that a textbook package could not be delivered due to an incomplete street address.</li>
+          </ul>
+
+          <h2>The Anatomy of College-Focused Phishing Attacks</h2>
+          
+          <h3>1. Credential Harvesting & Fake Single Sign-On (SSO)</h3>
+          <p>University credentials represent high-value assets on dark web marketplaces because educational (.edu) domains carry high reputation scores that attackers use to bypass spam filters and blast outbound phishing. In a credential harvesting attack, the victim receives an urgent notice claiming unauthorized login attempts. The embedded link leads to a forged login interface replicating the university’s Canvas, Blackboard, or Microsoft 365 gateway. Once the student inputs their ID and password, the attacker captures the credentials and may immediately prompt for a 2-Factor Authentication (2FA) one-time passcode to hijack the session in real time.</p>
+
+          <h3>2. Remote Internship & Fake-Check Overpayment Scams</h3>
+          <p>With students actively seeking resume-building opportunities, fraudulent job offers represent one of the most financially damaging vectors. Scammers post remote research assistant or data entry openings on job boards or send direct emails. Once the student accepts, the "employer" mails a counterfeit cashier's check (often for $2,500), instructs the student to deposit it, keep $500 as an advance stipend, and wire the remaining $2,000 to an "approved IT equipment vendor" via Zelle, Venmo, or wire transfer. Under federal banking regulations, banks make deposited check funds temporarily available within 1 to 2 business days. However, when the counterfeit check officially bounces weeks later, the student is held legally and financially liable for the entire amount wired to the scammer.</p>
+
+          <h3>3. Parcel Delivery Smishing (SMS Phishing)</h3>
+          <p>Smishing exploits the immediacy of mobile devices. Students routinely order textbooks, electronics, and clothing online. Attackers blast SMS alerts claiming that a delivery failed and requesting a $1.99 redelivery fee. Because mobile phone address bars truncate long URLs, victims fail to notice the deceptive domain and submit their credit card number, CVV, and billing address, enabling subsequent unauthorized transactions.</p>
+
+          <h2>The Red-Flag Inspection Protocol</h2>
+          <p>Defending against phishing does not require advanced technical wizardry; it requires disciplined inspection habits:</p>
+          <ol>
+            <li><strong>Examine the Sender Address, Not Just the Display Name:</strong> Attackers easily change display names to "Campus Registrar". Look at the actual email domain after the '@' sign. If the domain ends in <code>.fake-portal.test</code> or uses a free webmail service, it is counterfeit.</li>
+            <li><strong>Inspect Links by Hovering:</strong> Before clicking any link, hover your mouse cursor over it to preview the true destination URL in your browser's bottom status bar. Look for deceptive subdomains where the legitimate name is pushed into a subdomain (e.g. <code>university.edu.malicious-site.com</code>).</li>
+            <li><strong>The "HTTPS" Padlock Fallacy:</strong> Modern SSL certificates are free and automated. Over 80% of active phishing landing pages utilize valid HTTPS certificates. A padlock only guarantees that encryption exists between your browser and the server; it does not verify that the server is run by an honest entity.</li>
+            <li><strong>Verify Out-of-Band:</strong> If you receive an alarming notification regarding tuition dues, room changes, or bank holds, independently navigate to the verified website using a saved bookmark or dial the verified phone number printed on the back of your physical card. Never use phone numbers or links provided within the suspicious message itself.</li>
+          </ol>
+
+          <h2>What to Do if You Clicked or Entered Credentials</h2>
+          <p>If you suspect you have fallen victim to a phishing message, swift response dramatically mitigates harm:</p>
+          <ul>
+            <li><strong>Immediate Password Reset:</strong> From a clean, separate device, change your university password immediately. If you reuse that password on personal accounts (Google, banking), change those as well.</li>
+            <li><strong>Revoke Sessions & Reset MFA:</strong> Access your account security settings to terminate all active login sessions and verify that no unauthorized MFA devices or phone numbers were added.</li>
+            <li><strong>Notify Campus IT Security:</strong> Contact your university Information Security Helpdesk immediately. Timely reporting allows security engineers to block malicious domains on the campus firewall and safeguard your peers.</li>
+            <li><strong>Financial Freezes:</strong> If banking or debit card details were submitted, call your bank's fraud line immediately to cancel the compromised card and place a credit freeze with major credit bureaus if necessary.</li>
+          </ul>
+
+          <p><strong>Conclusion:</strong> In cybersecurity, the human element is often labeled the weakest link. With proper training, critical awareness, and verified defensive habits, informed college students transform from prime targets into the campus network's strongest line of defense.</p>
+        </div>
+
+        <!-- Subtab 3: Research Report -->
+        <div id="doc-research-view" class="doc-pane doc-prose" style="display: none;">
+          <h1>Cybersecurity Capstone Research Report</h1>
+          <p><strong>Topic:</strong> Mitigating Social Engineering and Credential Harvesting in Higher Education Environments</p>
+          <p><strong>Principal Standards Referenced:</strong> NIST SP 800-177 (Trustworthy Email), NIST SP 800-61 Rev. 2 (Computer Security Incident Handling), CISA Phishing Guidance, CERT-In Cyber Security Guidelines, Verizon DBIR 2024.</p>
+
+          <h2>1. Executive Summary & Problem Formulation</h2>
+          <p>Higher education institutions maintain unique open-network topologies designed to foster academic collaboration. However, this openness, coupled with high turnover in the student body, creates substantial attack surfaces. According to the 2024 Verizon Data Breach Investigations Report (DBIR), social engineering represents the entry vector in over 68% of breaches involving human interaction, with phishing and credential theft continuing to dominate initial access vectors in academic environments.</p>
+
+          <h2>2. Threat Taxonomy & Methodology</h2>
+          <p>Our research analyzed 8 distinct threat vectors prevalent on collegiate campuses. To develop realistic defensive heuristics without endangering live systems, our dataset uses reserved RFC 2606 / RFC 6761 domains (<code>.test</code>, <code>.example</code>) and synthetic threat scenarios reflecting contemporary adversarial tactics.</p>
+          
+          <table>
+            <thead>
+              <tr>
+                <th>Threat Vector</th>
+                <th>Primary Adversary Pretext</th>
+                <th>Underlying Vulnerability Exploited</th>
+                <th>CISA / NIST Control</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Credential Harvesting</td>
+                <td>Campus account termination within 24h</td>
+                <td>Cognitive urgency & visual SSO mimicry</td>
+                <td>NIST SP 800-63B (Phishing-Resistant MFA)</td>
+              </tr>
+              <tr>
+                <td>Fake Check / Job Scam</td>
+                <td>$35/hr remote research assistant</td>
+                <td>Student financial pressure & delayed check clearing</td>
+                <td>CISA End-User Education Guide</td>
+              </tr>
+              <tr>
+                <td>Package Delivery Smishing</td>
+                <td>Incomplete shipping address ($1.99 fee)</td>
+                <td>Mobile URL truncation & low-cost friction</td>
+                <td>FTC Consumer Advisory on SMS Smishing</td>
+              </tr>
+              <tr>
+                <td>BEC / Wire Impersonation</td>
+                <td>Department Chair requesting emergency gift cards</td>
+                <td>Deference to academic hierarchy</td>
+                <td>NIST SP 800-177 (DMARC, SPF, DKIM)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>3. AI Tooling Comparison & Defense Analysis</h2>
+          <p>We evaluated two distinct paradigms for automated phishing detection: pure Large Language Models (LLMs) versus deterministic heuristic rule engines:</p>
+          <ul>
+            <li><strong>Deterministic Rule Engines:</strong> Zero latency, zero external API costs, 100% explainability, and immune to prompt injection. However, rule engines can suffer from rigid regex boundaries when syntax is novel.</li>
+            <li><strong>Large Language Models (LLMs):</strong> Nuanced context comprehension and multilingual evaluation. However, they introduce external network dependency, recurring API costs, inference latency, and potential hallucination risks.</li>
+            <li><strong>Architectural Synthesis:</strong> Our project implements a hybrid defensive architecture: a primary transparent heuristic rule engine ensures 100% offline functionality and instantaneous demonstration, supplemented by an optional server-side LLM connector (Gemini/OpenAI) with strict JSON schema validation.</li>
+          </ul>
+
+          <h2>4. Ethical & Defensive Limitations</h2>
+          <p>This project adheres strictly to defensive ethical mandates. The system generates defensive awareness and screening metrics; it does not deploy offensive phishing campaigns, harvest user credentials, or interface with live weaponized infrastructure.</p>
+        </div>
+
+        <!-- Subtab 4: Test Plan & Verification -->
+        <div id="doc-test-plan-view" class="doc-pane doc-prose" style="display: none;">
+          <h1>Verification & Testing Plan</h1>
+          <p>This document records the functional verification test cases, expected outcomes, boundary analyses, and executed test results for the AI Phishing Awareness Campaign Kit.</p>
+
+          <h2>1. Functional Test Matrix</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Test ID</th>
+                <th>Component</th>
+                <th>Input / Action</th>
+                <th>Expected Outcome</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TC-01</td>
+                <td>Analyzer Engine</td>
+                <td>High urgency + password request + fake domain</td>
+                <td>Classified as "Likely phishing" with score &gt;= 70</td>
+                <td>PASSED</td>
+              </tr>
+              <tr>
+                <td>TC-02</td>
+                <td>Analyzer Engine</td>
+                <td>Courier parcel delivery with $1.99 fee</td>
+                <td>Classified as "Suspicious — needs verification"</td>
+                <td>PASSED</td>
+              </tr>
+              <tr>
+                <td>TC-03</td>
+                <td>Analyzer Engine</td>
+                <td>CS101 faculty room change announcement</td>
+                <td>Classified as "Likely legitimate" with score &lt; 20</td>
+                <td>PASSED</td>
+              </tr>
+              <tr>
+                <td>TC-04</td>
+                <td>Analyzer Engine</td>
+                <td>Empty string submission</td>
+                <td>HTTP 400 with friendly validation message</td>
+                <td>PASSED</td>
+              </tr>
+              <tr>
+                <td>TC-05</td>
+                <td>Checklist Module</td>
+                <td>Select "Requests for Passwords" + "Urgency"</td>
+                <td>Immediate escalation to "Critical Phishing Risk"</td>
+                <td>PASSED</td>
+              </tr>
+              <tr>
+                <td>TC-06</td>
+                <td>Quiz Controller</td>
+                <td>Complete 10 questions with all correct answers</td>
+                <td>100% score calculation, Champion rank, localStorage save</td>
+                <td>PASSED</td>
+              </tr>
+              <tr>
+                <td>TC-07</td>
+                <td>API Health</td>
+                <td>GET /api/status</td>
+                <td>Returns JSON with mode="demo_heuristic"</td>
+                <td>PASSED</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>2. False-Positive and False-Negative Boundary Analysis</h2>
+          <ul>
+            <li><strong>False-Positive Mitigation:</strong> Legitimate faculty announcements often contain dates, room numbers, and academic instructions. The rule engine includes positive legitimacy heuristics (e.g. references to Canvas, Blackboard, and official SSO) that award score credits, preventing authentic academic notices from being erroneously flagged as phishing.</li>
+            <li><strong>False-Negative Mitigation:</strong> Advanced phishers often sanitize their spelling to avoid spam keywords. The heuristic engine analyzes structural indicators including mismatched subdomains, shortened URL providers, and punitive ultimatums rather than relying solely on dictionary keywords.</li>
+          </ul>
+
+          <h2>3. Accessibility & Responsiveness Audit</h2>
+          <p>The dashboard utilizes semantic HTML5 landmarks, high-contrast dark theme ratios meeting WCAG AA requirements, keyboard-accessible navigation (Tab and arrow keys), and CSS media queries supporting viewports from 360px mobile devices to 4K desktop screens.</p>
+        </div>
+
+        <!-- Subtab 5: Automation Workflow -->
+        <div id="doc-automation-view" class="doc-pane doc-prose" style="display: none;">
+          <h1>Campaign Automation Plan & Workflow</h1>
+          <p>Documented strategy for transforming weekly cybersecurity threat topics into draft social media campaigns and quiz questions with mandatory Human-In-The-Loop (HITL) review.</p>
+
+          <h2>1. Manual Workflow (Zero-Cost Baseline)</h2>
+          <ol>
+            <li><strong>Topic Selection:</strong> Campus security analyst selects weekly threat theme (e.g. Week 1: IT Account Expirations, Week 2: Remote Job Scams).</li>
+            <li><strong>Prompt Execution:</strong> Analyst runs standardized template prompt from the Prompt Library in an internal LLM workbench.</li>
+            <li><strong>Review & Approval:</strong> Content is inspected against fact-checking criteria (source validation against CISA/NIST advisories).</li>
+            <li><strong>Staging:</strong> Approved posts and quiz questions are appended to <code>data/social_campaign.json</code> and <code>data/quiz_questions.json</code>.</li>
+          </ol>
+
+          <h2>2. Automated Pipeline via Zapier / Make (Optional Integration)</h2>
+          <p>For institutions wishing to streamline content drafting, a safe, unautomated-dispatch pipeline can be implemented:</p>
+          <ul>
+            <li><strong>Trigger:</strong> New advisory published to CISA / US-CERT RSS feed.</li>
+            <li><strong>Transformer Step (Make / Zapier):</strong> Webhook passes advisory title and CVE summary to an AI formatting endpoint with defensive instructions.</li>
+            <li><strong>Safety Gate (Mandatory):</strong> The webhook outputs a <em>Draft Card</em> into an internal Google Sheet or Notion review queue. The system <strong>never automatically broadcasts unreviewed content</strong>.</li>
+            <li><strong>Human Sign-Off:</strong> Once a cybersecurity staff member checks the "Approved" box, a webhook publishes the content to student portal feeds.</li>
+          </ul>
+        </div>
+
+        <!-- Subtab 6: AI Prompt Library -->
+        <div id="doc-prompts-view" class="doc-pane doc-prose" style="display: none;">
+          <h1>AI Prompt Engineering Library</h1>
+          <p>Standardized prompt templates used across this project for research summarization, scenario generation, quiz authoring, and social media drafting.</p>
+
+          <h2>1. Training Scenario Generation Prompt</h2>
+          <pre><code>Role: Principal Cybersecurity Awareness Engineer
+Task: Create a realistic, clearly labelled fictional email scenario demonstrating [Scenario Type: e.g. Fake Job Offer / Bank Impersonation].
+Constraints:
+- Strictly use reserved RFC 2606 example domains (e.g. example.edu, example.test).
+- Never reference real corporations, living persons, or active malware payloads.
+- Embed exactly 3-5 distinct cognitive red flags (e.g., artificial urgency, lookalike domain, fake check overpayment).
+- Provide: Subject, Sender Header, Message Body, Classification, Warning Signs, Explanation, and Safe Action.</code></pre>
+
+          <h2>2. Quiz Question Development Prompt</h2>
+          <pre><code>Role: Pedagogical Cyber Defense Specialist
+Task: Write a 4-option multiple-choice quiz question evaluating student discernment regarding [Topic: e.g. Domain Verification / MFA Interception].
+Format:
+- 1 unambiguous correct answer based on NIST SP 800-63 guidelines.
+- 3 plausible distractors reflecting common student misconceptions (e.g. trusting the HTTPS padlock).
+- Clear explanation of why the correct answer is secure and why the distractors are dangerous.</code></pre>
+
+          <h2>3. Social Media Campaign Prompt</h2>
+          <pre><code>Role: Security Awareness Communication Specialist
+Task: Generate an impactful educational social media post for college students on [Threat: e.g. Package Delivery Smishing].
+Structure:
+- Attention-grabbing headline with high-contrast warning icon.
+- Concise 2-sentence awareness message in relatable student language.
+- Actionable, memorable safety tip.
+- 4-5 relevant cybersecurity hashtags.
+- Detailed visual concept brief for a graphic designer or poster generator.</code></pre>
+        </div>
+
+        <!-- Subtab 7: Ethics & Limitations -->
+        <div id="doc-ethics-view" class="doc-pane doc-prose" style="display: none;">
+          <h1>Ethical Considerations & System Boundaries</h1>
+          
+          <h2>1. Defensive Charter</h2>
+          <p>The AI Phishing Awareness Campaign Kit is developed exclusively for defensive, educational, and awareness-raising purposes in compliance with university academic integrity standards and cybersecurity codes of conduct.</p>
+
+          <h2>2. Strict Safety Guardrails</h2>
+          <ul>
+            <li><strong>No Credential Harvesting Pages:</strong> The application does not deploy fake login pages to trick users or capture real student credentials.</li>
+            <li><strong>No Offensive Phishing Engines:</strong> The kit does not provide mass email sending, spoofed SMTP relays, or deceptive targeting tools.</li>
+            <li><strong>Fictional Targets Only:</strong> All scenarios utilize invented entities and reserved example top-level domains (<code>.test</code>, <code>.example</code>, <code>example.edu</code>). Real organizations, professors, or brands are never spoofed.</li>
+            <li><strong>No Active Malware or Weaponized Links:</strong> All links point to simulated test paths; no live exploit payloads, tracking pixels, or weaponized macros exist in the codebase.</li>
+          </ul>
+
+          <h2>3. System Limitations</h2>
+          <p>Automated detection engines are heuristic approximations. Attackers continuously refine social engineering tactics. Consequently, a "Likely legitimate" verdict from this kit or any automated tool is never an absolute guarantee of safety. Users must always exercise independent verification.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <strong>AI Phishing Awareness Campaign Kit</strong> &copy; 2026 | Cybersecurity Capstone Project
+      </div>
+      <div class="footer-links">
+        <a href="#dashboard" onclick="switchTab('dashboard')">Dashboard</a>
+        <a href="#analyzer" onclick="switchTab('analyzer')">Analyzer</a>
+        <a href="#learning" onclick="switchTab('learning')">Learning</a>
+        <a href="#samples" onclick="switchTab('samples')">Samples</a>
+        <a href="#checklist" onclick="switchTab('checklist')">Checklist</a>
+        <a href="#quiz" onclick="switchTab('quiz')">Quiz</a>
+        <a href="/presentation" target="_blank">Slide Deck ↗</a>
+        <a href="/poster" target="_blank">Printable Poster ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/analyzer.js"></script>
+  <script src="/static/js/quiz.js"></script>
+  <script src="/static/js/checklist.js"></script>
+  <script src="/static/js/presentation.js"></script>
+
+  <script>
+    // Subtab switching in Project Reports section
+    function switchReportTab(paneId, btn) {
+      document.querySelectorAll('.doc-pane').forEach(p => p.style.display = 'none');
+      document.querySelectorAll('.doc-tab-btn').forEach(b => b.classList.remove('active'));
+
+      const targetPane = document.getElementById(`doc-${paneId}`);
+      if (targetPane) targetPane.style.display = 'block';
+
+      if (btn) {
+        btn.classList.add('active');
+      }
+    }
+    window.switchReportTab = switchReportTab;
+  </script>
+</body>
+</html>
+
